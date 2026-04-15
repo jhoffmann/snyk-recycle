@@ -2,8 +2,6 @@
 
 A CLI tool for cycling Snyk project activation states to force recreation of GitHub webhooks.
 
-> Tool: [jhoffmann/snyk-recycle](https://github.com.mcas.ms/jhoffmann/snyk-recycle)
-
 ## Prerequisites
 
 - [Bun](https://bun.com) installed
