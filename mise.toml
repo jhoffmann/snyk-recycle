@@ -1,0 +1,27 @@
+[tasks.snyk]
+hide = true
+usage = '''
+arg "<command>" help="Command to run" {
+  choices "list" "activate" "deactivate"
+}
+flag "-r --repo <repo>" help="Target Repository"
+'''
+run = "bun run index.ts ${usage_command} --names-start-with ${usage_repo}"
+
+[tasks.list]
+usage = '''
+arg "<repo>" help="Target Repo"
+'''
+run = "mise run snyk list --repo ${usage_repo}"
+
+[tasks.act]
+usage = '''
+arg "<repo>" help="Target Repo"
+'''
+run = "mise run snyk activate --repo ${usage_repo}"
+
+[tasks.deact]
+usage = '''
+arg "<repo>" help="Target Repo"
+'''
+run = "mise run snyk deactivate --repo ${usage_repo}"
